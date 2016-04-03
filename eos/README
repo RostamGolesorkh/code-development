@@ -1,0 +1,33 @@
+ ABOUT
+=======
+
+                  << Welcome to eos >>
+
+This program calculates the optimized volume, bulk modules (B), and the first derivative of B with
+respect to pressure.
+
+ EXPLANATION
+=============
+ The parameters in equation of states:
+ --- Murnaghan ---
+     E(V) = E0 + B0*V/B' * [(V0/V)^B' / (B'-1) + 1] - B0 V0 / (B'-1)
+     P(V) = B0/B'*((V0/V)**B' -1)
+
+ --- Birch-Murnaghan ---
+     E(V) = E0 + 9B0V0/16{[(V0/V)^(2/3)-1]^3 B' + [(V0/V)^(2/3)-1]^2 [6-4(V0/V)^(2/3)]}
+     P(V) = 3/2*B0*((V0/V)**(7/3) - (V0/V)**(5/3))*(1 + 3/4*(B'-4)*[(V0/V)**(2/3) - 1])
+
+ E0: Energy in equilibrium
+ V0: Volume in equilibrium
+ B0: Bulk modulus in equilibrium
+ B': Pressure derivative of B
+
+See also: "http://en.wikipedia.org/wiki/Birch-Murnaghan_equation_of_state"
+
+ CONTACT
+=========
+
+If you have any suggestion or you found any bug, please write to  
+
+E-mail: r.golesorkhtabar@gmail.com
+Rostam Golesorkhtabar
