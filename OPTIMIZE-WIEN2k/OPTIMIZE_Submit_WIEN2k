@@ -1,0 +1,24 @@
+#!/bin/tcsh -f
+#
+# AUTHOR:
+# Rostam Golesorkhtabar
+# r.golesorkhtabar@gmail.com
+#
+# DATE:
+# Tue Jan 1  00:00:00  2013
+#
+# SYNTAX:
+# OPTIMIZE_Submit_WIEN2k
+#
+# EXPLANATION:
+#
+#
+set dir_list = `ls -d *_??`
+foreach dir_num ($dir_list)
+    cd $dir_num
+    if (-e run_WIEN2k_$dir_num) rm -f run_WIEN2k_$dir_num
+    cp ../run_WIEN2k run_WIEN2k_$dir_num
+    ~/bin/my_llsubmit run_WIEN2k_$dir_num
+    cd ..
+end
+exit
